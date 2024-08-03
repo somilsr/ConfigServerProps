@@ -1,0 +1,49 @@
+1) create github repo and keep configuration properties in git repo
+welcome.yml
+welcom-dev.yml
+welcome-prod.yml
+
+admin.yml
+admin-dev.yml
+admin-prod.yml
+
+report.yml
+report-dev.yml
+report-prod.yml
+
+
+-----------------------------------create config server -----------------
+
+creating new project
+add config server and actuator dependancy on project
+
+add on main method file along with @springbootApplication 
+@SpringBootApplication
+@EnableConfigServer
+
+pom.xml
+spring.application.name=SBMS-ConfigServer
+spring.cloud.config.server.git.uri=https://github.com/somilsr/ConfigServerProps.git
+spring.cloud.config.server.git.clone-on-start=true
+management.security.enable=false
+
+browser url
+http://localhost:8080/welcome/config
+-----------------------------------server is ready now create config client -----------------
+create boot application with blow dependancies
+config-client
+web-starter
+
+configure application name ,application port ,config-server-url,profile
+  bootstrap.yml---->application startup time want to load some properties use this file
+  application.yml---> load after the startup the application
+
+create restcontroller with required mehtods
+ run the app and test now
+
+
+
+
+
+
+

@@ -33,6 +33,7 @@ http://localhost:8080/welcome/config
 create boot application with blow dependancies
 config-client
 web-starter
+cloud bootstrap
 
 configure application name ,application port ,config-server-url,profile
   bootstrap.yml---->application startup time want to load some properties use this file
